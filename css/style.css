@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=DM+Serif+Text:ital@0;1&family=New+Tegomin&family=Oswald:wght@200;300;400;500;600;700&family=Rock+Salt&display=swap');
+
+/*
+font-family: 'DM Serif Text', serif;
+font-family: 'Abel', sans-serif;
+*/
+
+/* CSS HEX */
+/*
+--green-ryb: #65ab29ff;
+--pakistan-green: #0a6901ff;
+--falu-red: #78281fff;
+--harvest-gold: #db9418ff;
+*/
+
+/* SCSS RGB */
+/*
+$green-ryb: rgba(101, 171, 41, 1);
+$pakistan-green: rgba(10, 105, 1, 1);
+$falu-red: rgba(120, 40, 31, 1);
+$harvest-gold: rgba(219, 148, 24, 1);*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Abel', sans-serif;
+    line-height: 1.5;
+
+}
+
+h1 {
+    font-family: 'DM Serif Text', serif;
+}
+
+/*General Styles*/
+.flexbox {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.cankoWords {
+    color: rgba(219, 148, 24, 1);
+}
+
+
+/*Navbar*/
+.navbar {
+    padding: 10px 2rem;
+    /*border-top: 5px solid rgba(120, 40, 31, 1);*/
+    /*border-bottom: 3px solid rgba(120, 40, 31, 1);*/
+}
+
+.navbar .brand {
+    width: 40%;
+}
+
+.navbar .brand a {
+    text-decoration: none;
+}
+
+.navbar .brand .flexbox .brand-image img {
+    width: 80px;
+    display: block;
+}
+
+.navbar .brand .flexbox .brand-name {
+    margin-left: 10px;
+}
+
+.navbar .links {
+    width: 60%;
+    text-align: right;
+}
+
+.navbar .links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .links ul li,
+.navbar .links ul li a {
+    display: inline-block;
+}
+
+.navbar .links ul li a {
+    padding: 15px 20px;
+    color: #299019;
+    text-decoration: none;
+    font-size: 100%;
+    margin: 0 10px;
+    border: 1px solid #299019;
+}
+
+.navbar .links ul li.active a {
+    background-color: #299019;
+    border-radius: 50px;
+    color: #fff;
+}
+
+/*Header*/
+.masthead {
+    background-image: url("../img/energyLite.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.masthead .overlay {
+    padding: 150px 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+}
+
+/*Main Content*/
+.main-content {
+    padding: 50px 2rem;
+}
+
+.main-content .actButs {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(120, 40, 31, 1);
+    justify-content: left;
+    
+}
+
+.main-content .actButs .buttons {
+    margin: 10px;
+}
+
+.main-content .actButs .buttons:nth-child(1) {
+    margin-left: 0;
+}
+
+#active-button {
+    background-color: rgba(120, 40, 31, 1);
+}
+
+.main-content .acts h1 {
+    margin-bottom: 50px;
+}
+
+.main-content .act-image {
+    width: 30%;
+    padding-right: 50px;
+}
+
+.main-content .act-details {
+    width: 70%;
+}
+
+.section3 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.section3 li {
+    display: inline;
+}
+footer {
+    background-color: rgba(219, 148, 24, 1);
+    padding: 2%;
+    color: white;
+/*    display: block;*/
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    }
+
+
+
+/*MAIN Content*/
+.arti1 {
+    display: flex;
+    flex-direction: column;
+}
+.arti1 figure {
+    text-align: center;
+    box-shadow: 5px 0px 20px 0px #888888;
+}
+.arti1 p {
+/*    text-align: left;*/
+}
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+
+/*Mobile View*/
+
+@media only screen and (max-width: 30rem) {
+    .navbar .brand {
+        width: 100%;
+    }
+    .navbar .links{
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar .links ul li,
+    .navbar .links ul li a {
+        display: block;
+        margin: 10px 0;
+    }
+    .main-content .act-image {
+        width: 100%;
+    }
+    .main-content .act-details {
+        width: 100%
+    }
+    footer {
+        clear: both;
+    }
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    
+/*    Main content info*/
+    
+    .arti1 {
+        display:contents;
+    }
+    .arti1 figure {
+        width: 25%;
+        float: left;
+    }
+    
+    .arti1 p {
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+
+}
+
+/*Desktop*/
+@media only screen and (max-width: 60rem) {
+    
+    .navbar .brand {
+        width: 100%;
+    }
+    .navbar .links{
+        width: 100%;
+        text-align: left;
+        margin-top: 30px;
+    }
+
+}
+
+
